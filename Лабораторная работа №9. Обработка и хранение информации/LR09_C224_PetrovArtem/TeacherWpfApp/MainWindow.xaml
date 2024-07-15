@@ -1,0 +1,54 @@
+﻿<Window x:Class="TeacherWpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TeacherWpfApp"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen"
+        Title="Лабораторная работа №9. МДК 01.01. Часть 2"
+        Height="580" Width="840"
+        Icon="Images/логотип.jpg">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Grid.Column="0"
+               Source="Images/логотип.jpg"/>
+        <TextBlock Grid.Row="0" Grid.Column="1"
+               Text="База данных преподавателей ФСПО ГУАП"
+               FontSize="30" TextWrapping="Wrap"/>
+        <StackPanel Grid.Row="2" Grid.Column="0">
+            <Label/>
+            <Button Name="buttonAllTeachers" Content="Все преподаватели"
+                    Click="buttonAllTeachers_Click"/>
+            <Button Name="buttonAppendTeacher" Content="Добавить"
+                    Click="buttonAppendTeacher_Click"/>
+            <Label/>
+            <Button Name="buttonLoadFromTxt" Content="Загрузить из txt"
+                    Click="buttonLoadFromTxt_Click"/>
+            <Button Name="buttonSaveToTxt" Content="Сохранить в txt"
+                    Click="buttonSaveToTxt_Click"/>
+            <Label/>
+            <Button Name="buutonLoadFromXml" Content="Загрузить из XML"
+                    Click="buttonLoadFromXml_Click"/>
+            <Button Name="buttonSaveToXml" Content="Сохранить в XML"
+                    Click="buttonSaveToXml_Click"/>
+            <Label/>
+            <Button Name="buttonSaveToExcel" Content="Сохранить в Excel"
+                    Click="buttonSaveToExcel_Click"/>
+            <Button Name="buttonSaveToWord" Content="Сохранить в Word"
+                    Click="buttonSaveToWord_Click"/>
+            <Label/>
+            <Button Name="buttonExit" Content="Выйти" Click="buttonExit_Click"/>
+        </StackPanel>
+        <Frame Name="MainFrame" Grid.Row="2" Grid.Column="1"/>
+    </Grid>
+</Window>
